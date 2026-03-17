@@ -1,0 +1,173 @@
+{
+  "project_name": "Muscle Labs - Sustanon Landing Page",
+  "design_philosophy": {
+    "theme": "dark",
+    "mood": "Aggressive, High-Tech Pharmacological, Premium Underground, Potent",
+    "core_concept": "The Science of Giants",
+    "visual_style": "Cyberpunk Gym Aesthetics - Deep blacks, glowing neon reds, metallic golds, smoke textures"
+  },
+  "typography": {
+    "font_family": {
+      "heading": "\"Barlow Condensed\", \"Teko\", sans-serif",
+      "body": "\"Inter\", \"Roboto\", sans-serif",
+      "accent": "\"Share Tech Mono\", monospace"
+    },
+    "scale": {
+      "h1": "text-6xl md:text-8xl font-black uppercase tracking-tighter",
+      "h2": "text-4xl md:text-5xl font-bold uppercase tracking-tight",
+      "h3": "text-2xl md:text-3xl font-bold uppercase",
+      "body": "text-base md:text-lg leading-relaxed text-gray-300",
+      "label": "text-sm font-mono tracking-widest uppercase text-red-500"
+    },
+    "imports": [
+      "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Inter:wght@400;600&family=Share+Tech+Mono&display=swap"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "default": "#050505",
+        "paper": "#0A0A0A",
+        "subtle": "#121212"
+      },
+      "primary": {
+        "main": "#DC2626",
+        "glow": "rgba(220, 38, 38, 0.6)",
+        "dark": "#991B1B"
+      },
+      "secondary": {
+        "main": "#D4AF37",
+        "glow": "rgba(212, 175, 55, 0.4)",
+        "light": "#FCD34D"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#A3A3A3",
+        "muted": "#525252"
+      },
+      "status": {
+        "success": "#10B981",
+        "error": "#EF4444",
+        "warning": "#F59E0B"
+      }
+    },
+    "gradients": {
+      "gold_text": "linear-gradient(to bottom, #FCD34D, #D4AF37, #B45309)",
+      "red_glow": "radial-gradient(circle, rgba(220,38,38,0.2) 0%, rgba(5,5,5,0) 70%)",
+      "dark_metal": "linear-gradient(145deg, #1a1a1a, #0a0a0a)"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-none skew-x-[-10deg] uppercase tracking-wider shadow-[0_0_20px_rgba(220,38,38,0.5)] transition-all hover:shadow-[0_0_30px_rgba(220,38,38,0.8)] hover:scale-105",
+      "secondary": "bg-transparent border border-yellow-600 text-yellow-500 hover:bg-yellow-600/10 font-bold py-4 px-8 rounded-none skew-x-[-10deg] uppercase tracking-wider transition-all",
+      "whatsapp": "bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 px-8 rounded-full shadow-lg flex items-center gap-2 transition-all hover:scale-105"
+    },
+    "cards": {
+      "feature": "bg-neutral-900/50 backdrop-blur-sm border border-neutral-800 p-6 hover:border-red-600/50 transition-colors group relative overflow-hidden",
+      "product": "bg-gradient-to-b from-neutral-900 to-black border border-neutral-800 p-6 flex flex-col items-center hover:shadow-[0_0_30px_rgba(255,255,255,0.05)] transition-all"
+    },
+    "inputs": {
+      "default": "bg-neutral-900 border border-neutral-800 text-white p-3 focus:border-red-600 focus:ring-1 focus:ring-red-600 outline-none transition-colors placeholder:text-neutral-600"
+    }
+  },
+  "layout": {
+    "grid_system": "Use 'Bento Grid' strategy. Mix wide spans (col-span-2) with tall spans (row-span-2). Use gap-4 or gap-6.",
+    "spacing": "Generous vertical spacing (py-20 or py-32) between sections. Tight spacing within component groups.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  },
+  "assets": {
+    "images": {
+      "logo": "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/g34piw1w_IMG_3116.png",
+      "products": {
+        "sustanon_hero": "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/bt8nt32u_AA69F4CD-70B1-4A52-A6AF-C248ADEFD9D7.png",
+        "primobolan": "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/bo2waug1_IMG_3129.png",
+        "masteron": "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/tmw2ckxp_IMG_3122.png",
+        "enantato": "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/j5f2h2o2_IMG_3121.png",
+        "packaging": "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/6muerg8t_5f32f601-3632-492a-b8d2-b1ea22fd725c.jpeg"
+      },
+      "backgrounds": {
+        "smoke_texture": "https://images.unsplash.com/photo-1656687204808-ceca71970871?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "sponsor": "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/ebmjx0gh_IMG_4670.jpeg",
+        "shipping": "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/pldouqqx_27752ed2-062d-444b-bc0d-9dc7c6a1466d.jpeg"
+      }
+    },
+    "videos": {
+      "review_1": "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/5indefmm_31B647B5-FCEF-407C-B363-016976D682FD.mp4",
+      "review_2": "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/ybw40crr_ScreenRecording_11-19-2025-13-34-45_1%202.mp4"
+    },
+    "icons": "Use lucide-react (Beaker, Flame, Shield, Activity, Zap, Star, Play, CheckCircle)"
+  },
+  "motion": {
+    "library": "framer-motion",
+    "guidelines": [
+      "Use 'staggerChildren' for lists/grids.",
+      "Hero elements should slide up and fade in with a slight delay.",
+      "Buttons should scale slightly (1.05) on hover with a glow intensification.",
+      "Scroll animations: elements fade in as they enter viewport (useInView)."
+    ]
+  },
+  "sections_structure": [
+    {
+      "name": "Hero",
+      "elements": [
+        "Background: Dark with smoke texture overlay (low opacity)",
+        "Center: Massive 'SUSTANON' typography in metallic/gold gradient",
+        "Image: Floating Sustanon bottle with red backlight glow",
+        "CTA: 'GARANTIR UNIDADE' (Red Glow Button)",
+        "Urgency: 'Oferta por tempo limitado' with countdown"
+      ]
+    },
+    {
+      "name": "Benefits (The Science)",
+      "elements": [
+        "Grid layout (Bento)",
+        "Cards: 'Hipertrofia Acelerada', 'Força Bruta', 'Recuperação Rápida', 'Libido Extrema'",
+        "Icons: Neon Red/Gold stroke icons"
+      ]
+    },
+    {
+      "name": "Products (The Stack)",
+      "elements": [
+        "Carousel or Grid of other products (Primobolan, Masteron, Enantato)",
+        "Price tags clearly visible in Gold",
+        "Add to cart buttons"
+      ]
+    },
+    {
+      "name": "Reviews (Evidence)",
+      "elements": [
+        "Video Player wrappers with custom 'Play' overlay",
+        "Star ratings (5 stars gold)",
+        "User names"
+      ]
+    },
+    {
+      "name": "Guarantee & Trust",
+      "elements": [
+        "Shipping image",
+        "Sponsor image",
+        "Badges: 'Compra Segura', 'Entrega Garantida', 'Produto Original'",
+        "Note: DO NOT use Emergent badge"
+      ]
+    },
+    {
+      "name": "Footer",
+      "elements": [
+        "Logo",
+        "Social Links (WhatsApp, Insta, FB)",
+        "Copyright",
+        "Disclaimer (Medical advice warning)"
+      ]
+    }
+  ],
+  "universal_guidelines": [
+    "Theme: Dark Mode Only. Force 'dark' class on HTML or Body.",
+    "Do NOT use gradients for text readability - keep body text high contrast (gray-300 on black).",
+    "Use red glow sparingly - only for what matters (CTA, Key Product).",
+    "Images must be optimized/constrained. Max height 80vh for hero image.",
+    "Video elements must use lazy loading (preload='none') and a poster image.",
+    "Social Links must be functional: WhatsApp (https://wa.me/5521972232170), Insta (https://instagram.com/suplementosmaisbaratos), FB (https://facebook.com/complementosmaisbaratos).",
+    "Add 'data-testid' to all buttons and inputs."
+  ]
+}
