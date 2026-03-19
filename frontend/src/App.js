@@ -78,7 +78,7 @@ const getProductWhatsAppLink = (message) => {
 // Assets
 const ASSETS = {
   logo: "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/g34piw1w_IMG_3116.png",
-  sustanon: "https://customer-assets.emergentagent.com/job_cb62d599-aee6-476d-9abd-89f0590dfbd5/artifacts/bt8nt32u_AA69F4CD-70B1-4A52-A6AF-C248ADEFD9D7.png",
+  sustanon: "https://www.suplementosmaisbaratos.com.br/wp-content/uploads/2026/03/sustan-xt-muscle-pharm-durateston.png",
   primobolan: "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/bo2waug1_IMG_3129.png",
   masteron: "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/tmw2ckxp_IMG_3122.png",
   enantato: "https://customer-assets.emergentagent.com/job_wizardly-bouman-3/artifacts/j5f2h2o2_IMG_3121.png",
@@ -302,9 +302,9 @@ const HeroSection = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <section className="hero-background min-h-screen flex items-center relative pt-20 pb-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="hero-background min-h-screen flex items-center relative pt-20 pb-32 w-full">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
             ref={ref}
@@ -318,7 +318,7 @@ const HeroSection = () => {
               Oferta por tempo limitado
             </Badge>
             
-            <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-4">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tighter mb-4">
               <span className="gold-text">SUSTANON</span>
               <br />
               <span className="text-white">DURATESTON</span>
@@ -372,15 +372,14 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
             <div className="absolute inset-0 bg-gradient-radial from-red-600/20 via-transparent to-transparent blur-3xl"></div>
-            <motion.img
+            <img
               src={ASSETS.sustanon}
               alt="Sustanon - Durateston Muscle Labs"
-              className="relative z-10 w-full max-w-md mx-auto product-glow animate-float"
-              animate={{ y: [0, -15, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto product-glow"
+              style={{ height: 'auto' }}
             />
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-3/4 h-8 bg-red-600/20 blur-2xl rounded-full"></div>
           </motion.div>
@@ -405,8 +404,8 @@ const BenefitsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 bg-gradient-to-b from-[#050505] to-[#0a0a0a] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-24 bg-gradient-to-b from-[#050505] to-[#0a0a0a] relative w-full">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           label="A Ciência dos Gigantes"
           title="Benefícios Comprovados"
@@ -940,31 +939,32 @@ const Footer = () => {
   );
 };
 
-// Floating WhatsApp Button
+// Floating WhatsApp Button - Safari iframe compatible
 const FloatingWhatsApp = () => {
   return (
     <motion.a
       href={WHATSAPP_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-6 right-6 z-40"
+      style={{ position: 'fixed' }}
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ delay: 1, type: "spring" }}
       data-testid="floating-whatsapp"
     >
       <motion.div 
-        className="w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <MessageCircle className="w-8 h-8 text-white" />
+        <MessageCircle className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
       </motion.div>
     </motion.a>
   );
 };
 
-// Audio Player Component
+// Audio Player Component - Safari compatible
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
@@ -978,7 +978,7 @@ const AudioPlayer = () => {
         audioRef.current.play().then(() => {
           setIsPlaying(true);
         }).catch(() => {
-          // Autoplay blocked
+          // Autoplay blocked - common on mobile
         });
       }
     };
@@ -1011,23 +1011,24 @@ const AudioPlayer = () => {
       <audio ref={audioRef} src={MUSIC_URL} loop preload="auto" />
       <motion.button
         onClick={toggleAudio}
-        className="fixed bottom-6 left-6 z-50 w-12 h-12 rounded-full bg-neutral-900 border border-red-600/50 flex items-center justify-center shadow-lg hover:bg-neutral-800 transition-colors"
+        className="fixed bottom-6 left-6 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-neutral-900 border border-red-600/50 flex items-center justify-center shadow-lg hover:bg-neutral-800 transition-colors"
+        style={{ position: 'fixed' }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 1.5, type: "spring" }}
         data-testid="audio-toggle"
       >
         {isPlaying ? (
-          <Volume2 className="w-5 h-5 text-red-500" />
+          <Volume2 className="w-4 h-4 sm:w-5 sm:h-5 text-red-500" />
         ) : (
-          <VolumeX className="w-5 h-5 text-gray-500" />
+          <VolumeX className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500" />
         )}
       </motion.button>
     </>
   );
 };
 
-// Header/Navbar
+// Header/Navbar - Safari iframe compatible
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -1049,11 +1050,12 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/95 backdrop-blur-md py-2" : "bg-black/80 backdrop-blur-sm py-4"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full ${
+        scrolled ? "bg-black/95 backdrop-blur-md py-2" : "bg-black/80 backdrop-blur-sm py-3 sm:py-4"
       }`}
+      style={{ position: 'fixed' }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         <a href={WEBSITE_LINK} target="_blank" rel="noopener noreferrer">
           <img
             src={ASSETS.logo}
